@@ -1,0 +1,7 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+GET     /                           controllers.Application.index()
+GET     /id/$id<[0-9]+>             controllers.Application.id(id: Int)
+GET     /id_str/:id                 controllers.Application.idStr(id: String)
