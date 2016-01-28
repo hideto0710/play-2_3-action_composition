@@ -3,7 +3,7 @@ package controllers
 import scala.concurrent.Future
 import play.api.libs.json.Json
 import play.api.mvc.{Action, Controller}
-import actions.LoggingAction
+import actions.{UserAction, LoggingAction}
 
 object Application extends Controller {
 
@@ -19,7 +19,8 @@ object Application extends Controller {
     }
   }
 
-  def idStr(id: String) = LoggingAction { request =>
-    Ok(Json.toJson(Map("id" -> id)))
+  def user() = UserAction { request =>
+    Ok(Json.toJson(Map("user" -> request.user.name)))
   }
+
 }

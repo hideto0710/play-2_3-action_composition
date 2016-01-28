@@ -4,4 +4,4 @@
 
 GET     /                           controllers.Application.index()
 GET     /id/$id<[0-9]+>             controllers.Application.id(id: Int)
-GET     /id_str/:id                 controllers.Application.idStr(id: String)
+GET     /user                       controllers.Application.user()
